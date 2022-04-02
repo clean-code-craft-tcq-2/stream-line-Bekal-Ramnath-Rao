@@ -76,6 +76,6 @@ This section lists the minimum functionality of the Sender and Receiver.
 
 Setup the quality parameters of your project (duplication, complexity, coverage, warnings) using GitHub workflow yml files.
 
-##Requirement
+## Sender's Requirement
 
 ![](Sender's_Requirement.drawio.png)
