@@ -78,4 +78,4 @@ Setup the quality parameters of your project (duplication, complexity, coverage,
 
 ##Requirement
 
-![alt text for screen readers](/Sender's_Requirement.io "Text to show on mouseover")
+![](Sender's_Requirement.drawio.png)
