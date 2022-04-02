@@ -82,4 +82,4 @@ Setup the quality parameters of your project (duplication, complexity, coverage,
 
 ## Sender's Design
 
-![](image/Sender's_Design.drawio.png)
+![](image/Sender's_Design.png)
