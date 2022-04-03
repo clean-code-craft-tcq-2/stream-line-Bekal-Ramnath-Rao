@@ -5,6 +5,13 @@
 
 void generateManualData(Temperature temperature,SOC soc,Sender sender)
 {
+  int manualtemperature_data[sender.number_of_values] = {21,31,41,51,61};
+  int manualsoc_data[sender.number_of_values] = {21,25,30,35,39};
+  for(int i=0;i<sender.number_of_values;i++)
+  {
+    temperature.data[i] = manualtemperature_data[i];
+    soc.data[i] = manualsoc_data[i];
+  }
 
 }
 
@@ -17,13 +24,13 @@ TEST_CASE("Prepare Data") {
   soc.maximum_soc = 40;
   soc.minimum_soc = 20;
   sender.number_of_values = 5;
-  int temperature_data[sender.number_of_values] = {21,31,41,51,61};
-  int soc_data[sender.number_of_values] = {21,25,30,35,39};
+  int Expectedtemperature_data[sender.number_of_values] = {21,31,41,51,61};//assuming these are generated values
+  int Expectedsoc_data[sender.number_of_values] = {21,25,30,35,39};
   void (*funp_generateData)(Temperature,SOC,Sender) = generateManualData;
   sender.generateData(temperature,soc,sender,funp_generateData);
   for(int i=0; i<sender.number_of_values; i++)
   {
-    REQUIRE( temperature.data[i] == temperature_data[i]);
-    REQUIRE( soc.data[i] == soc_data[i]);
+    REQUIRE( temperature.data[i] == Expectedtemperature_data[i]);
+    REQUIRE( soc.data[i] == Expectedsoc_data[i]);
   }
 }
