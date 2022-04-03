@@ -3,18 +3,23 @@
 
 class Temperature
 {
-float maximum_temperature;
-float minimum_temperature;
+  public:
+    float maximum_temperature;
+    float minimum_temperature;
+    float data[]={};
 };
 
 class SOC
 {
-float maximum_soc;
-float minimum_soc;
+  public:
+    float maximum_soc;
+    float minimum_soc;
+    float data[]={};
 };
 
 class Sender
 {
-int number_of_values;
-generateData(Temperature temperature,SOC soc,Sender sender,void (*)(Temperature temperature,SOC soc,Sender sender));
+  public:
+    int number_of_values;
+    void generateData(Temperature temperature,SOC soc,Sender sender,void (*)(Temperature temperature,SOC soc,Sender sender));
 };
