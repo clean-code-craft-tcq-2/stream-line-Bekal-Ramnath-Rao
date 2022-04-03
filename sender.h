@@ -23,3 +23,5 @@ class Sender
     int number_of_values;
     void generateData(Temperature temperature,SOC soc,Sender sender,void (*)(Temperature temperature,SOC soc,Sender sender));
 };
+
+#endif
