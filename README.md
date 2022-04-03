@@ -86,4 +86,9 @@ Setup the quality parameters of your project (duplication, complexity, coverage,
 
 ## Test specification
 
-1. 
+1. Prepare data
+    * Set minimum value for battery parameter, min_temp --> 20 , min_soc -->20
+    * Set maximum for battery parameter, max_temp -->80 , max_soc --> 40
+    * Set no of values required for Battery parameter, 5
+    * Call Generate Data function.
+    * Call function to format the data
