@@ -11,19 +11,17 @@ class Sender
 class Temperature
 {
   public:
-    Sender sender;
     float maximum_temperature;
     float minimum_temperature;
-    float data[sender.number_of_values];
+    float data[50];
 };
 
 class SOC
 {
   public:
-    Sender sender;
     float maximum_soc;
     float minimum_soc;
-    float data[sender.number_of_values];
+    float data[50];
 };
 
 #endif
