@@ -11,8 +11,8 @@ TEST_CASE("Prepare Data") {
   Sender sender;
   temperature.maximum_temperature = 80;
   temperature.minimum_temperature = 20;
-  soc.SOC_maximum = 40;
-  soc.SOC_minimum = 20;
+  soc.maximum_soc = 40;
+  soc.minimum_soc = 20;
   sender.number_of_values = 5;
   int temperature_data[sender.number_of_values] = {21,31,41,51,61};
   int soc_data[sender.number_of_values] = {21,25,30,35,39};
