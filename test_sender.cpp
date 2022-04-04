@@ -5,8 +5,8 @@
 
 using namespace std;
 
-void generateManualData(Temperature temperature,SOC soc,Sender sender)
-{
+void generateManualData(Temperature *temperature,SOC *soc,Sender *sender)
+
   float manualtemperature_data[sender.number_of_values] = {21,31,41,51,61};
   float manualsoc_data[sender.number_of_values] = {21,25,30,35,39};
   for(int i=0;i<sender.number_of_values;i++)
@@ -29,7 +29,7 @@ TEST_CASE("Prepare Data") {
   float Expectedtemperature_data[sender.number_of_values] = {21,31,41,51,61};//assuming these are generated values
   float Expectedsoc_data[sender.number_of_values] = {21,25,30,35,39};
   void (*funp_generateData)(Temperature,SOC,Sender) = generateManualData;
-  sender.generateData(temperature,soc,sender,funp_generateData);
+  sender.generateData(&temperature,&soc,&sender,funp_generateData);
   for(int i=0; i<sender.number_of_values; i++)
   {
     cout<<temperature.data[i]<<endl;
