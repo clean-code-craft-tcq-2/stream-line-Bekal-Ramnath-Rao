@@ -12,7 +12,6 @@ void generateManualData(Temperature temperature,SOC soc,Sender sender)
   for(int i=0;i<sender.number_of_values;i++)
   {
     temperature.data[i] = manualtemperature_data[i];
-    cout<<temperature.data[i]<<endl;
     soc.data[i] = manualsoc_data[i];
   }
 
@@ -27,8 +26,8 @@ TEST_CASE("Prepare Data") {
   soc.maximum_soc = 40;
   soc.minimum_soc = 20;
   sender.number_of_values = 5;
-  int Expectedtemperature_data[sender.number_of_values] = {21,31,41,51,61};//assuming these are generated values
-  int Expectedsoc_data[sender.number_of_values] = {21,25,30,35,39};
+  float Expectedtemperature_data[sender.number_of_values] = {21,31,41,51,61};//assuming these are generated values
+  float Expectedsoc_data[sender.number_of_values] = {21,25,30,35,39};
   void (*funp_generateData)(Temperature,SOC,Sender) = generateManualData;
   sender.generateData(temperature,soc,sender,funp_generateData);
   for(int i=0; i<sender.number_of_values; i++)
