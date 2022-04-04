@@ -11,8 +11,8 @@ void generateManualData(Temperature temperature,SOC soc,Sender sender)
   int manualsoc_data[sender.number_of_values] = {21,25,30,35,39};
   for(int i=0;i<sender.number_of_values;i++)
   {
-    cout<<"I am here"<<endl;
     temperature.data[i] = manualtemperature_data[i];
+    cout<<temperature.data[i]<<endl;
     soc.data[i] = manualsoc_data[i];
   }
 
