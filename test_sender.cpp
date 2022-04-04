@@ -32,6 +32,7 @@ TEST_CASE("Prepare Data") {
   sender.generateData(temperature,soc,sender,funp_generateData);
   for(int i=0; i<sender.number_of_values; i++)
   {
+    cout<<temperature.data[i]<<endl;
     REQUIRE( temperature.data[i] == Expectedtemperature_data[i]);
     REQUIRE( soc.data[i] == Expectedsoc_data[i]);
   }
