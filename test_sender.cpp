@@ -3,6 +3,8 @@
 #include "test/catch.hpp"
 #include "sender.h"
 
+using namespace std;
+
 void generateManualData(Temperature temperature,SOC soc,Sender sender)
 {
   int manualtemperature_data[sender.number_of_values] = {21,31,41,51,61};
