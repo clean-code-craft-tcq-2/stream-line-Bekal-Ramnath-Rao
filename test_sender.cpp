@@ -5,16 +5,10 @@
 
 using namespace std;
 
+int generateData_Called;
 void generateManualData(float parameter_Maximum,float parameter_Minimum)
 {
-  float manualtemperature_data[5] = {21,31,41,51,61};
-  float manualsoc_data[5] = {21,25,30,35,39};
-  for(int i=0;i<sender.number_of_values;i++)
-  {
-    temperature.data[i] = manualtemperature_data[i];
-    soc.data[i] = manualsoc_data[i];
-  }
-
+  generateData_Called = 1;
 }
 
 TEST_CASE("Prepare Data") {
@@ -32,9 +26,5 @@ TEST_CASE("Prepare Data") {
   void (*funp_formatData)(Temperature&,SOC&,Sender&) = formatData;
   void (*funp_printonConsole)(Sender&) = printonConsole;
   sender.generateandFormatData(temperature,soc,sender,funp_generateData,funp_formatData,funp_printonConsole);
-  for(int i=0; i<sender.number_of_values; i++)
-  {
-    REQUIRE( temperature.data[i] == Expectedtemperature_data[i]);
-    REQUIRE( soc.data[i] == Expectedsoc_data[i]);
-  }
+  REQUIRE( generateData_Called == 1);
 }
