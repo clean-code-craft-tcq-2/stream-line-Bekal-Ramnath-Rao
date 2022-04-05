@@ -21,10 +21,10 @@ TEST_CASE("Prepare Data") {
   Temperature temperature;
   SOC soc;
   Sender sender;
-  temperature.maximum_temperature = 80;
-  temperature.minimum_temperature = 20;
-  soc.maximum_soc = 40;
-  soc.minimum_soc = 20;
+  temperature.maximum= 80;
+  temperature.minimum= 20;
+  soc.maximum = 40;
+  soc.minimum = 20;
   sender.number_of_values = 5;
   float Expectedtemperature_data[sender.number_of_values] = {21,31,41,51,61};//assuming these are generated values
   float Expectedsoc_data[sender.number_of_values] = {21,25,30,35,39};
