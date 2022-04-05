@@ -28,4 +28,7 @@ TEST_CASE("Prepare Data") {
   void (*funp_printonConsole)(Sender&) = printonConsole;
   sender.generateandFormatData(temperature,soc,sender,funp_generateData,funp_formatData,funp_printonConsole);
   REQUIRE( generateData_Called == 1);
+  
+  funp_generateData = generateRandomData;
+  sender.generateandFormatData(temperature,soc,sender,funp_generateData,funp_formatData,funp_printonConsole);
 }
