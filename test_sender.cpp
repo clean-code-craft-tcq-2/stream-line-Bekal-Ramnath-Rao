@@ -29,6 +29,7 @@ TEST_CASE("Prepare Data") {
   sender.generateandFormatData(temperature,soc,sender,funp_generateData,funp_formatData,funp_printonConsole);
   REQUIRE( generateData_Called == 1);
   
+  sender.number_of_values = 20;
   funp_generateData = generateRandomData;
   sender.generateandFormatData(temperature,soc,sender,funp_generateData,funp_formatData,funp_printonConsole);
 }
