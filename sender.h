@@ -1,6 +1,8 @@
 #ifndef SENDER_H__
 #define SENDER_H__
 
+#include "string.h"
+
 class Temperature
 {
   public:
@@ -21,7 +23,9 @@ class Sender
 {
   public:
     int number_of_values;
-    void generateandFormatData(Temperature& ,SOC& ,Sender& ,void (*)(float,float), void(*)(Temperature,SOC,Sender));
+    void generateandFormatData(Temperature& ,SOC& ,Sender& ,void (*)(float,float),
+                               void(*)(Temperature,SOC,Sender),void(*)(string));
+    string formatted_output[50];
 };
 
 #endif
