@@ -5,7 +5,7 @@
 
 using namespace std;
 
-void generateManualData(Temperature &temperature,SOC &soc,Sender &sender)
+void generateManualData(float parameter_Maximum,float parameter_Minimum)
 {
   float manualtemperature_data[sender.number_of_values] = {21,31,41,51,61};
   float manualsoc_data[sender.number_of_values] = {21,25,30,35,39};
