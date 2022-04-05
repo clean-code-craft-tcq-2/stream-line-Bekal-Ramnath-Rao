@@ -1,7 +1,7 @@
 #include "sender.h"
 #include <iostream>
 #include <stdlib.h>
-#include "string.h"
+#include <string.h>
 
 using namespace std;
 
