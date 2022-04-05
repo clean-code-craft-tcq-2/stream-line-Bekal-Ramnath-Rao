@@ -24,7 +24,7 @@ class Sender
   public:
     int number_of_values;
     void generateandFormatData(Temperature& ,SOC& ,Sender& ,void (*)(float,float),
-                               void(*)(Temperature,SOC,Sender),void(*)(string));
+                               void(*)(Temperature,SOC,Sender),void(*)(Sender));
     string formatted_output[50];
 };
 
