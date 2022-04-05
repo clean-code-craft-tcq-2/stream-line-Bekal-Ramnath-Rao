@@ -2,6 +2,8 @@
 #define SENDER_H__
 
 #include <string>
+#include <iostream> 
+#include <bits/stdc++.h>
 
 class Temperature
 {
