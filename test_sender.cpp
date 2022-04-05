@@ -6,9 +6,10 @@
 using namespace std;
 
 int generateData_Called;
-void generateManualData(float parameter_Maximum,float parameter_Minimum)
+float generateManualData(float parameter_Maximum,float parameter_Minimum)
 {
   generateData_Called = 1;
+  retrun 1;
 }
 
 TEST_CASE("Prepare Data") {
