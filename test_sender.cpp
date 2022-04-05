@@ -9,7 +9,7 @@ int generateData_Called;
 float generateManualData(float parameter_Maximum,float parameter_Minimum)
 {
   generateData_Called = 1;
-  retrun 1;
+  return 1.0;
 }
 
 TEST_CASE("Prepare Data") {
