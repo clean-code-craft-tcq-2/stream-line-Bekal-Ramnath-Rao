@@ -16,7 +16,7 @@ float generateRandomData(float parameter_Maximum, float parameter_Minimum)
   return data;
 }
 
-void Sender::generateandFormatData(Temperature &temperature,SOC &soc,Sender &sender,void (*funp_generateData)(float,float),
+void Sender::generateandFormatData(Temperature &temperature,SOC &soc,Sender &sender,float (*funp_generateData)(float,float),
                                    void (*funp_formatData)(Temperature&,SOC&,Sender&),void (*funp_printonConsole)(Sender&))
 {
   for(int i=0;i<sender.number_of_values;i++)
