@@ -27,7 +27,7 @@ class Sender
     int number_of_values;
     void generateandFormatData(Temperature& ,SOC& ,Sender& ,float (*)(float,float),
                                void(*)(Temperature&,SOC&,Sender&),void(*)(Sender&));
-    char formatted_output[50][];
+    char formatted_output[50][10];
 };
 
 float generateRandomData(float,float);
