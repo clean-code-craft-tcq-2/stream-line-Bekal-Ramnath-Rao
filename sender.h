@@ -5,6 +5,8 @@
 #include <iostream> 
 #include <bits/stdc++.h>
 
+using namespace std;
+
 class Temperature
 {
   public:
@@ -27,7 +29,7 @@ class Sender
     int number_of_values;
     void generateandFormatData(Temperature& ,SOC& ,Sender& ,float (*)(float,float),
                                void(*)(Temperature&,SOC&,Sender&),void(*)(Sender&));
-    std::string formatted_output[50];
+    string formatted_output[50];
 };
 
 float generateRandomData(float,float);
