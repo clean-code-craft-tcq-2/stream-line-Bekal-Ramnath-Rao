@@ -29,8 +29,8 @@ TEST_CASE("Prepare Data") {
   float Expectedtemperature_data[sender.number_of_values] = {21,31,41,51,61};//assuming these are generated values
   float Expectedsoc_data[sender.number_of_values] = {21,25,30,35,39};
   void (*funp_generateData)(float,float) = generateManualData;
-  void (*funp_formatData)(Temperature,SOC,Sender) = formatData;
-  void (*funp_printonConsole)(Sender) = printonConsole;
+  void (*funp_formatData)(Temperature&,SOC&,Sender&) = formatData;
+  void (*funp_printonConsole)(Sender&) = printonConsole;
   sender.generateandFormatData(temperature,soc,sender,funp_generateData,funp_formatData,funp_printonConsole);
   for(int i=0; i<sender.number_of_values; i++)
   {
