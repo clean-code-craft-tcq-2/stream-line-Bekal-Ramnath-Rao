@@ -1,7 +1,7 @@
 #ifndef SENDER_H__
 #define SENDER_H__
 
-#include <string.h>
+#include <string>
 
 class Temperature
 {
