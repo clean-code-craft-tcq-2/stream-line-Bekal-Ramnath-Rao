@@ -28,4 +28,10 @@ class Sender
     string formatted_output[50];
 };
 
+float generateRandomData(float,float);
+
+void formatData(Temperature&,SOC&,Sender&);
+
+void printonConsole(Sender&);
+
 #endif
