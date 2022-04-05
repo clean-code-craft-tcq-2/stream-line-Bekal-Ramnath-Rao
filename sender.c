@@ -8,7 +8,7 @@ using namespace std;
 static float generateRandomData(float parameter_Maximum, float parameter_Minimum)
 {
   srand(time(0));
-  float data = (rand() % (parameter_Maximum+1)) ;
+  float data = ((float)rand() % (parameter_Maximum+1)) ;
   if(data < parameter_Minimum)
   {
     data = data + parameter_Minimum;
