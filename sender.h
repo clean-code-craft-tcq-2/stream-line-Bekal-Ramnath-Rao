@@ -4,16 +4,16 @@
 class Temperature
 {
   public:
-    float maximum_temperature;
-    float minimum_temperature;
+    float maximum;
+    float minimum;
     float data[50];
 };
 
 class SOC
 {
   public:
-    float maximum_soc;
-    float minimum_soc;
+    float maximum;
+    float minimum;
     float data[50];
 };
 
@@ -21,7 +21,7 @@ class Sender
 {
   public:
     int number_of_values;
-    void generateData(Temperature& ,SOC& ,Sender& ,void (*)(Temperature&,SOC&,Sender&));
+    void generateData(Temperature& ,SOC& ,Sender& ,void (*)(float,float));
 };
 
 #endif
