@@ -21,7 +21,7 @@ class Sender
 {
   public:
     int number_of_values;
-    void generateData(Temperature& ,SOC& ,Sender& ,void (*)(float,float));
+    void generateandFormatData(Temperature& ,SOC& ,Sender& ,void (*)(float,float), void(*)(Temperature,SOC,Sender));
 };
 
 #endif
