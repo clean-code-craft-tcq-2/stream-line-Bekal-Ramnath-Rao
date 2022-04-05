@@ -31,7 +31,7 @@ TEST_CASE("Prepare Data") {
   void (*funp_generateData)(float,float) = generateManualData;
   void (*funp_formatData)(Temperature&,SOC&,Sender&) = formatData;
   void (*funp_printonConsole)(Sender&) = printonConsole;
-  sender.generateData(temperature,soc,sender,funp_generateData,funp_formatData,funp_printonConsole);
+  sender.generateandFormatData(temperature,soc,sender,funp_generateData,funp_formatData,funp_printonConsole);
   for(int i=0; i<sender.number_of_values; i++)
   {
     REQUIRE( temperature.data[i] == Expectedtemperature_data[i]);
