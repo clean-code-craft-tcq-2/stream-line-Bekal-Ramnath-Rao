@@ -6,9 +6,13 @@
 
 using namespace std;
 
-float generateRandomData(float parameter_Maximum, float parameter_Minimum)
+void initiateTimetogenerateData()
 {
   srand(time(0));
+}
+
+float generateRandomData(float parameter_Maximum, float parameter_Minimum)
+{
   float data = (rand() % (int)(parameter_Maximum+1)) ;
   if(data < parameter_Minimum)
   {
@@ -25,6 +29,7 @@ void Sender::generateandFormatData(Temperature &temperature,SOC &soc,Sender &sen
     temperature.data[i] = funp_generateData(temperature.maximum, temperature.minimum);
     soc.data[i] = funp_generateData(soc.maximum,soc.minimum);
   }
+  initiateTimetogenerateData();
   funp_formatData(temperature,soc,sender);
   funp_printonConsole(sender);
 }
