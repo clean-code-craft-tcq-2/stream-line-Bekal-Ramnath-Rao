@@ -27,12 +27,12 @@ class Sender
 {
   public:
     int number_of_values;
-    void generateandFormatData(Temperature& ,SOC& ,Sender& ,float (*)(float,float,int),
+    void generateandFormatData(Temperature& ,SOC& ,Sender& ,float (*)(float,float),
                                void(*)(Temperature&,SOC&,Sender&),void(*)(Sender&));
     string formatted_output[50];
 };
 
-float generateRandomData(float,float,int);
+float generateRandomData(float,float);
 
 void formatData(Temperature&,SOC&,Sender&);
 
