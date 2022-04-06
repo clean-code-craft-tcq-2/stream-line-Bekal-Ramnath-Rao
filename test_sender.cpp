@@ -6,7 +6,7 @@
 using namespace std;
 
 int generateData_Called;
-float generateManualData(float parameter_Maximum,float parameter_Minimum)
+float generateManualData(float parameter_Maximum,float parameter_Minimum,int time_parameter)
 {
   generateData_Called = 1;
   return 1.0;
@@ -23,7 +23,7 @@ TEST_CASE("Prepare Data") {
   sender.number_of_values = 5;
   float Expectedtemperature_data[sender.number_of_values] = {21,31,41,51,61};//assuming these are generated values
   float Expectedsoc_data[sender.number_of_values] = {21,25,30,35,39};
-  float (*funp_generateData)(float,float) = generateManualData;
+  float (*funp_generateData)(float,float,int) = generateManualData;
   void (*funp_formatData)(Temperature&,SOC&,Sender&) = formatData;
   void (*funp_printonConsole)(Sender&) = printonConsole;
   sender.generateandFormatData(temperature,soc,sender,funp_generateData,funp_formatData,funp_printonConsole);
