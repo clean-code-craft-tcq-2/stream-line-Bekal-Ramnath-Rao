@@ -20,7 +20,7 @@ void formatData_test(Temperature &temperature,SOC &soc,Sender &sender)
   formatData_Called = 1;
 }
 
-void printonConsole_test(Temperature &temperature,SOC &soc,Sender &sender)
+void printonConsole_test(Sender &sender)
 {
   printonConsole_Called = 1;
 }
