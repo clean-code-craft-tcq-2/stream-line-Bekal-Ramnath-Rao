@@ -23,7 +23,7 @@ void Sender::generateandFormatData(Temperature &temperature,SOC &soc,Sender &sen
   for(int i=0;i<sender.number_of_values;i++)
   {
     temperature.data[i] = funp_generateData(temperature.maximum, temperature.minimum,i);
-    soc.data[i] = funp_generateData(soc.maximum,soc.minimum);
+    soc.data[i] = funp_generateData(soc.maximum,soc.minimum,i);
   }
   funp_formatData(temperature,soc,sender);
   funp_printonConsole(sender);
