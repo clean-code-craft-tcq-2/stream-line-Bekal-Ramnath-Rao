@@ -36,6 +36,8 @@ float generateRandomData(float,float);
 
 void formatData(Temperature&,SOC&,Sender&);
 
+void initiateTimetogenerateData();
+
 void printonConsole(Sender&);
 
 #endif
