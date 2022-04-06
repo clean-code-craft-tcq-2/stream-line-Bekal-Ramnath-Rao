@@ -24,7 +24,7 @@ float generateRandomData(float parameter_Maximum, float parameter_Minimum)
 void Sender::generateandFormatData(Temperature &temperature,SOC &soc,Sender &sender,float (*funp_generateData)(float,float),
                                    void (*funp_formatData)(Temperature&,SOC&,Sender&),void (*funp_printonConsole)(Sender&))
 {
-  initiateTimetogenerateData();
+  initiateTimetogenerateData(); //this is nescessary to generate differnt values at different times
   for(int i=0;i<sender.number_of_values;i++)
   {
     temperature.data[i] = funp_generateData(temperature.maximum, temperature.minimum);
@@ -38,7 +38,7 @@ void formatData(Temperature &temperature,SOC &soc,Sender &sender)
 {
   for(int i=0;i<sender.number_of_values;i++)
   {
-    sender.formatted_output[i] = to_string(temperature.data[i]) + "," + to_string(soc.data[i]);
+    sender.formatted_output[i] = to_string(temperature.data[i]) + "," + to_string(soc.data[i]);//for eg: 40,50
   }
 }
 
