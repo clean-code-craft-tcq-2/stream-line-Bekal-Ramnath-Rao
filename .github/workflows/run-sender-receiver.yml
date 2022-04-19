@@ -28,4 +28,4 @@ jobs:
       run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o sender  *.c*
     
     - name: run
-      run: ./sender
+      run: ./sender | dotnet run --project ./Receiver/SensorReceiver/SensorReceiverTests.csproj
