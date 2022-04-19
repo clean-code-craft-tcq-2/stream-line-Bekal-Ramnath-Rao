@@ -25,7 +25,7 @@ jobs:
         dotnet-version: 3.1
 
     - name: Build sender
-      run: g++ -Wall -Wextra -o sender.exe sender.c
+      run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o sender  *.c*
     
     - name: run
-      run: ./sender.exe
+      run: ./sender
