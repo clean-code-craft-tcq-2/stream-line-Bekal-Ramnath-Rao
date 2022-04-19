@@ -27,5 +27,8 @@ jobs:
     - name: Build sender
       run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o sender  *.c*
     
-    - name: run
+    - name: Run sender
+      run: ./sender 
+
+    - name: Send data to the receiver
       run: ./sender | dotnet run --project ./Receiver/SensorReceiver/SensorReceiver.csproj
