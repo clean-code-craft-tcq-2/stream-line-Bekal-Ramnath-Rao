@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SensorReceiver", "SensorReceiver\SensorReceiver.csproj", "{49115E45-B9EB-47CA-B2C4-D0AE4C47BDA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorReceiverTests", "SensorReceiverTests\SensorReceiverTests.csproj", "{3303FCC3-3F38-4FEA-9E1D-55599A30144D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49115E45-B9EB-47CA-B2C4-D0AE4C47BDA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49115E45-B9EB-47CA-B2C4-D0AE4C47BDA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49115E45-B9EB-47CA-B2C4-D0AE4C47BDA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49115E45-B9EB-47CA-B2C4-D0AE4C47BDA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3303FCC3-3F38-4FEA-9E1D-55599A30144D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3303FCC3-3F38-4FEA-9E1D-55599A30144D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3303FCC3-3F38-4FEA-9E1D-55599A30144D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3303FCC3-3F38-4FEA-9E1D-55599A30144D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF690830-0FC0-4EC9-A391-D395DDBDD417}
+	EndGlobalSection
+EndGlobal
