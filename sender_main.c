@@ -1,6 +1,5 @@
-
-#include "test/catch.hpp"
 #include "sender.h"
+#include "sender.c"
 
 int main(){
 
