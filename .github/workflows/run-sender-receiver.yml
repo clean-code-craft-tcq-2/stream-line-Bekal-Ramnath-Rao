@@ -24,11 +24,14 @@ jobs:
       with:
         dotnet-version: 3.1
 
+    # - name: Build sender
+    #   run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o sender  *.c*
+
     - name: Build sender
-      run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o sender  *.c*
+      run: g++ -o sender.exe sender_main.c
     
     - name: Run sender
-      run: ./sender 
+      run: ./sender.exe 
 
     - name: Send data to the receiver
-      run: ./sender | dotnet run --project ./Receiver/SensorReceiver/SensorReceiver.csproj
+      run: ./sender.exe  | dotnet run --project ./Receiver/SensorReceiver/SensorReceiver.csproj
