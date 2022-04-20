@@ -1,4 +1,3 @@
-#include "sender.h"
 #include "sender.c"
 
 int main(){
