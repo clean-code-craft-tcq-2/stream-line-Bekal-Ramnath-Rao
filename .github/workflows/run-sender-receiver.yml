@@ -1,0 +1,37 @@
+name: Build and run sender and receiver
+
+on: [push,pull_request]
+
+jobs:
+  build:
+
+    strategy:
+      matrix:
+        configuration: [Debug]
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Update dependencies
+      run: |
+        sudo apt-get update
+
+    # Install the .NET Core workload
+    - name: Install .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1
+
+    # - name: Build sender
+    #   run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o sender  *.c*
+
+    - name: Build sender
+      run: g++ -o sender.exe sender_main.c
+    
+    - name: Run sender
+      run: ./sender.exe 
+
+    - name: Send data to the receiver
+      run: ./sender.exe  | dotnet run --project ./Receiver/SensorReceiver/SensorReceiver.csproj
